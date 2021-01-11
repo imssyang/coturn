@@ -1,0 +1,84 @@
+
+❯ ./configure --prefix=/opt/coturn --bindir=/opt/coturn/bin --confdir=/opt/coturn/conf
+ginstall: not found
+install is /usr/bin/install
+pkill is /usr/bin/pkill
+sqlite3 is /opt/sqlite/bin/sqlite3
+Use TMP dir /var/tmp
+Compiler: cc
+Library option -lwldap32 cannot be used
+Library option -lwldap64 cannot be used
+Library option -lintl cannot be used
+Sockets code is fine: no sin_len field present
+Ignore IP_RECVERR
+Crypto SSL lib found.
+SSL lib found.
+Libevent2 development found.
+Libevent2 runtime found.
+Libevent2 runtime 'extra' found.
+Libevent2 openssl found.
+Libevent2 pthreads found.
+SQLite library found.
+SQLite development found.
+PostgreSQL found.
+MySQL found.
+
+MONGODB DEVELOPMENT LIBRARIES (libmongoc-1.0 and libbson-1.0) AND/OR HEADER (mongoc.h)
+	ARE NOT INSTALLED PROPERLY ON THIS SYSTEM.
+	THAT'S OK BUT THE TURN SERVER IS BUILDING WITHOUT MONGODB SUPPORT.
+
+
+HIREDIS DEVELOPMENT LIBRARY (libhiredis.*) AND/OR HEADERS (hiredis/*.h)
+	ARE NOT INSTALLED PROPERLY ON THIS SYSTEM.
+	THAT'S OK BUT THE TURN SERVER IS BUILDING WITHOUT REDIS SUPPORT.
+
+PREFIX=/opt/coturn LOCALSTATEDIR=/opt/coturn/var OSLIBS= -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -Wl,-rpath,/usr/local/lib/ -Wl,-rpath,/opt/libsocket/lib -Wl,-rpath,/opt/libevent/lib -Wl,-rpath,/opt/postgresql/lib -Wl,-rpath,/opt/mysql/lib -Wl,-rpath,/usr/local/lib DBLIBS= -lsqlite3  -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -lpq  -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -lmysqlclient OSCFLAGS=-g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb DBCFLAGS= -I/opt/coturn/pgsql/include -I/opt/coturn/include/pgsql/ -I/opt/coturn/include/postgres/ -I/opt/coturn/postgres/include/ -I/opt/coturn/include/postgresql/ -I/opt/coturn/postgresql/include/ -I/usr/local/pgsql/include -I/usr/local/include/pgsql/ -I/usr/local/include/postgres/ -I/usr/local/postgres/include/ -I/usr/local/include/postgresql/ -I/usr/local/postgresql/include/ -I/usr/pgsql/include -I/usr/include/pgsql/ -I/usr/include/postgres/ -I/usr/postgres/include/ -I/usr/include/postgresql/ -I/usr/postgresql/include/ -I/opt/coturn/mysql/include -I/opt/coturn/include/mysql/ -I/usr/local/mysql/include -I/usr/local/include/mysql/ -I/usr/mysql/include -I/usr/include/mysql/ --prefix=/opt/coturn --bindir=/opt/coturn/bin --confdir=/opt/coturn/conf
+Makefile created: success.
+
+
+
+❯ make
+mkdir -p build/obj
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  -c src/client/ns_turn_ioaddr.c -o build/obj/ns_turn_ioaddr.o
+mkdir -p build/obj
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  -c src/client/ns_turn_msg_addr.c -o build/obj/ns_turn_msg_addr.o
+mkdir -p build/obj
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  -c src/client/ns_turn_msg.c -o build/obj/ns_turn_msg.o
+mkdir -p lib
+ar -r lib/libturnclient.a build/obj/ns_turn_ioaddr.o build/obj/ns_turn_msg_addr.o build/obj/ns_turn_msg.o 
+ar: creating lib/libturnclient.a
+pwd
+/opt/coturn/archive/source/coturn-4.5.1.3
+mkdir -p bin
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  src/apps/oauth/oauth.c src/apps/common/apputils.c src/apps/common/ns_turn_utils.c src/apps/common/stun_buffer.c -o bin/turnutils_oauth -Llib -lturnclient -Llib -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -Wl,-rpath,/usr/local/lib/ -Wl,-rpath,/opt/libsocket/lib -Wl,-rpath,/opt/libevent/lib -Wl,-rpath,/opt/postgresql/lib -Wl,-rpath,/opt/mysql/lib -Wl,-rpath,/usr/local/lib
+pwd
+/opt/coturn/archive/source/coturn-4.5.1.3
+mkdir -p bin
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  src/apps/natdiscovery/natdiscovery.c src/apps/common/apputils.c src/apps/common/ns_turn_utils.c src/apps/common/stun_buffer.c -o bin/turnutils_natdiscovery -Llib -lturnclient -Llib -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -Wl,-rpath,/usr/local/lib/ -Wl,-rpath,/opt/libsocket/lib -Wl,-rpath,/opt/libevent/lib -Wl,-rpath,/opt/postgresql/lib -Wl,-rpath,/opt/mysql/lib -Wl,-rpath,/usr/local/lib
+pwd
+/opt/coturn/archive/source/coturn-4.5.1.3
+mkdir -p bin
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  src/apps/stunclient/stunclient.c src/apps/common/apputils.c src/apps/common/ns_turn_utils.c src/apps/common/stun_buffer.c -o bin/turnutils_stunclient -Llib -lturnclient -Llib -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -Wl,-rpath,/usr/local/lib/ -Wl,-rpath,/opt/libsocket/lib -Wl,-rpath,/opt/libevent/lib -Wl,-rpath,/opt/postgresql/lib -Wl,-rpath,/opt/mysql/lib -Wl,-rpath,/usr/local/lib   
+pwd
+/opt/coturn/archive/source/coturn-4.5.1.3
+mkdir -p bin
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  src/apps/rfc5769/rfc5769check.c src/apps/common/apputils.c src/apps/common/ns_turn_utils.c src/apps/common/stun_buffer.c -o bin/turnutils_rfc5769check -Llib -lturnclient -Llib -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -Wl,-rpath,/usr/local/lib/ -Wl,-rpath,/opt/libsocket/lib -Wl,-rpath,/opt/libevent/lib -Wl,-rpath,/opt/postgresql/lib -Wl,-rpath,/opt/mysql/lib -Wl,-rpath,/usr/local/lib 
+mkdir -p bin
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  src/apps/uclient/uclient.c src/apps/uclient/startuclient.c src/apps/uclient/mainuclient.c src/apps/common/apputils.c src/apps/common/ns_turn_utils.c src/apps/common/stun_buffer.c -o bin/turnutils_uclient -Llib -lturnclient -Llib -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -Wl,-rpath,/usr/local/lib/ -Wl,-rpath,/opt/libsocket/lib -Wl,-rpath,/opt/libevent/lib -Wl,-rpath,/opt/postgresql/lib -Wl,-rpath,/opt/mysql/lib -Wl,-rpath,/usr/local/lib  
+mkdir -p bin
+rm -rf bin/turnadmin
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  -I/opt/coturn/pgsql/include -I/opt/coturn/include/pgsql/ -I/opt/coturn/include/postgres/ -I/opt/coturn/postgres/include/ -I/opt/coturn/include/postgresql/ -I/opt/coturn/postgresql/include/ -I/usr/local/pgsql/include -I/usr/local/include/pgsql/ -I/usr/local/include/postgres/ -I/usr/local/postgres/include/ -I/usr/local/include/postgresql/ -I/usr/local/postgresql/include/ -I/usr/pgsql/include -I/usr/include/pgsql/ -I/usr/include/postgres/ -I/usr/postgres/include/ -I/usr/include/postgresql/ -I/usr/postgresql/include/ -I/opt/coturn/mysql/include -I/opt/coturn/include/mysql/ -I/usr/local/mysql/include -I/usr/local/include/mysql/ -I/usr/mysql/include -I/usr/include/mysql/    -DTURN_NO_MONGO -DTURN_NO_HIREDIS src/apps/relay/ns_ioalib_engine_impl.c src/apps/relay/turn_ports.c src/apps/relay/http_server.c -Ilib src/apps/relay/mainrelay.c src/apps/relay/netengine.c src/apps/relay/libtelnet.c src/apps/relay/turn_admin_server.c src/apps/relay/userdb.c src/apps/relay/tls_listener.c src/apps/relay/dtls_listener.c src/apps/common/hiredis_libevent2.c src/apps/relay/dbdrivers/dbdriver.c src/apps/relay/dbdrivers/dbd_sqlite.c src/apps/relay/dbdrivers/dbd_pgsql.c src/apps/relay/dbdrivers/dbd_mysql.c src/apps/relay/dbdrivers/dbd_mongo.c src/apps/relay/dbdrivers/dbd_redis.c src/apps/common/apputils.c src/apps/common/ns_turn_utils.c src/apps/common/stun_buffer.c src/client/ns_turn_ioaddr.c src/client/ns_turn_msg_addr.c src/client/ns_turn_msg.c  src/server/ns_turn_allocation.c src/server/ns_turn_maps_rtcp.c src/server/ns_turn_maps.c src/server/ns_turn_server.c -o bin/turnserver -lsqlite3  -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -lpq  -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -lmysqlclient -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -Wl,-rpath,/usr/local/lib/ -Wl,-rpath,/opt/libsocket/lib -Wl,-rpath,/opt/libevent/lib -Wl,-rpath,/opt/postgresql/lib -Wl,-rpath,/opt/mysql/lib -Wl,-rpath,/usr/local/lib 
+cd bin; ln -s turnserver turnadmin  
+mkdir -p bin
+cc  -g  -Wall -Wno-deprecated-declarations -Wextra -Wformat-security -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Wcast-qual -I/opt/coturn/include -I/opt/coturn/include/ -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include  -DTURN_HAS_DAEMON       -DINSTALL_PREFIX=/opt/coturn -DTURNDB=/opt/coturn/var/db/turndb -Isrc -Isrc/apps/common -Isrc/server -Isrc/client -Isrc/client++ -I/opt/coturn/include/ -I/usr/local/include/  src/apps/peer/mainudpserver.c src/apps/peer/udpserver.c src/apps/common/apputils.c src/apps/common/ns_turn_utils.c src/apps/common/stun_buffer.c -o bin/turnutils_peer -Llib -lturnclient -Llib -L/usr/local/lib/ -L/opt/libsocket/lib -L/opt/libevent/lib -L/opt/postgresql/lib -L/opt/mysql/lib -lsocket -lrt -lnsl -lresolv -pthread -lcrypto -lssl -levent_core -levent_extra -levent_openssl -levent_pthreads -lsqlite3  -Wl,-rpath,/usr/local/lib/ -Wl,-rpath,/opt/libsocket/lib -Wl,-rpath,/opt/libevent/lib -Wl,-rpath,/opt/postgresql/lib -Wl,-rpath,/opt/mysql/lib -Wl,-rpath,/usr/local/lib  
+rm -rf include
+mkdir -p include/turn/client
+cp -pf src/client/*.h include/turn/client/
+cp -pf src/client++/*.h include/turn/client/
+cp -pf src/ns_turn_defs.h include/turn/
+install -d sqlite
+rm -rf sqlite/turndb
+sqlite3 sqlite/turndb < turndb/schema.sql
+
+
+

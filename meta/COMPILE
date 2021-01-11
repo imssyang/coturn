@@ -1,4 +1,11 @@
 
+vi configure
+  OSCFLAGS="-I${INCLUDEDIR} -I${PREFIX}/include -I/usr/local/include -I/opt/libsocket/include -I/opt/libevent/include -I/opt/postgresql/include -I/opt/mysql/include -I/opt/openssl/include ${CFLAGS}"
+  OSLIBS="${LDFLAGS}"
+  for ilib in ${PREFIX}/lib /usr/local/lib /usr/local/lib64 /opt/libsocket/lib /opt/libevent/lib /opt/postgresql/lib /opt/mysql/lib /opt/openssl/lib
+  do ... done
+
+
 ./configure --prefix=/opt/coturn --bindir=/opt/coturn/bin --confdir=/opt/coturn/conf
 make
 make install

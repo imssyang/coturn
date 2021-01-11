@@ -12,15 +12,14 @@ make install
 make deinstall
 make clean
 
-ln -s /usr/bin/install /usr/bin/ginstall
-
-apt install libssl-dev
-apt install sqlite3
-apt install libsqlite3-dev
-apt install libevent-dev
-apt install libpq-dev
-apt install mysql-client
-apt install libmysqlclient-dev
-apt install libhiredis-dev
+#ln -s /usr/bin/install /usr/bin/ginstall
+#apt install libssl-dev
+#apt install sqlite3
+#apt install libsqlite3-dev
+#apt install libevent-dev
+#apt install libpq-dev
+#apt install mysql-client
+#apt install libmysqlclient-dev
+#apt install libhiredis-dev
 
 

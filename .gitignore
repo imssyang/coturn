@@ -1,4 +1,9 @@
 # Ignore by git
 archive
-
+bin
+include
+lib
+man
+share
+var
 

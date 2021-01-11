@@ -5,7 +5,7 @@ GROUP=turnserver
 USER=turnserver
 HOME=/opt/$APP
 SYSD=/etc/systemd/system
-SERFILE=coturn.service
+SERFILE=turnserver.service
 
 init() {
   egrep "^$GROUP" /etc/group >/dev/null

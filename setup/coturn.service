@@ -7,9 +7,9 @@ After=remote-fs.target
 Wants=network-online.target
 
 [Service]
+Type=simple
 User=turnserver
 Group=turnserver
-Type=notify
 RuntimeDirectory=turnserver
 ExecStart=/opt/coturn/bin/turnserver -c /opt/coturn/conf/turnserver.conf
 Restart=on-failure

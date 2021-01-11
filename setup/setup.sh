@@ -34,6 +34,8 @@ init() {
     ln -s $HOME/setup/$SERFILE $SYSD/$SERFILE
     echo "($APP) create symlink: $SYSD/$SERFILE --> $HOME/setup/$SERFILE"
   fi
+
+  systemctl daemon-reload
 }
 
 deinit() {

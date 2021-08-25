@@ -18,13 +18,18 @@ init() {
     useradd -r -g $GROUP -s /usr/sbin/nologin -M $USER
   fi
 
+  if [[ ! -d $HOME/var/db ]]; then
+    mkdir -p $HOME/var/db
+    chmod 755 $HOME/var/db
+  fi
+
   if [[ ! -d $HOME/var/run ]]; then
-    mkdir $HOME/var/run
+    mkdir -p $HOME/var/run
     chmod 755 $HOME/var/run
   fi
 
   if [[ ! -d $HOME/var/log ]]; then
-    mkdir $HOME/var/log
+    mkdir -p $HOME/var/log
     chmod 755 $HOME/var/log
   fi
 

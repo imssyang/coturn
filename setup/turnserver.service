@@ -8,7 +8,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=turnserver
+User=root
 Group=turnserver
 RuntimeDirectory=turnserver
 ExecStart=/opt/coturn/bin/turnserver -c /opt/coturn/conf/turnserver.conf

@@ -37,6 +37,7 @@ init() {
 
   if [[ ! -s $SYSD/$SERFILE ]]; then
     ln -s $HOME/setup/$SERFILE $SYSD/$SERFILE
+    systemctl enable $SERFILE
     echo "($APP) create symlink: $SYSD/$SERFILE --> $HOME/setup/$SERFILE"
   fi
 
@@ -44,6 +45,12 @@ init() {
 }
 
 deinit() {
+  if [[ -s $SYSD/$SERFILE ]]; then
+    systemctl disable $SERFILE
+    rm -rf $SYSD/$SERFILE
+    echo "($APP) delete symlink: $SYSD/$SERFILE"
+  fi
+
   egrep "^$USER" /etc/passwd >/dev/null
   if [[ $? -eq 0 ]]; then
     userdel $USER
@@ -55,11 +62,6 @@ deinit() {
   fi
 
   chown -R root:root $HOME
-
-  if [[ -s $SYSD/$SERFILE ]]; then
-    rm -rf $SYSD/$SERFILE
-    echo "($APP) delete symlink: $SYSD/$SERFILE"
-  fi
 }
 
 start() {

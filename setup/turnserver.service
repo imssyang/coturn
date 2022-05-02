@@ -10,7 +10,6 @@ Wants=network-online.target
 Type=simple
 User=root
 Group=root
-RuntimeDirectory=turnserver
 ExecStart=/opt/coturn/bin/turnserver -c /opt/coturn/conf/turnserver.conf
 Restart=on-failure
 InaccessibleDirectories=/home

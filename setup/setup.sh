@@ -70,7 +70,7 @@ init() {
   chmod 755 $HOME
 
   _enable_service turnserver.service
-  $HOME/bin/turnadmin -A -u admin -p 'CN@1128.c'
+  $HOME/bin/turnadmin -A -u admin -p 'coturn'
 }
 
 deinit() {

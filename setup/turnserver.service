@@ -5,6 +5,8 @@ After=network.target
 After=network-online.target
 After=remote-fs.target
 Wants=network-online.target
+StartLimitInterval=120
+StartLimitBurst=3
 
 [Service]
 Type=simple
@@ -12,6 +14,7 @@ User=root
 Group=root
 ExecStart=/opt/coturn/bin/turnserver -c /opt/coturn/conf/turnserver.conf
 Restart=on-failure
+RestartSec=30
 InaccessibleDirectories=/home
 PrivateTmp=yes
 
